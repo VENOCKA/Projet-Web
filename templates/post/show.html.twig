@@ -1,0 +1,78 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <div class="container">
+
+		<div class="box">
+			<div class="info_card">
+				<h1>{{ jeux.nom }}</h1>
+                {% if jeux.image is not empty %}
+					<span class="card_level">
+						<img src="../image/{{ jeux.image }}.png">
+					</span>
+				{% endif %}
+			</div>
+			<div class="info_card"> 
+				<p>{{ jeux.description }}</p>
+			</div>
+            <div class="info_card"> 
+				<p>{{ jeux.editeur }}</p>
+			</div>
+            <div class="info_card"> 
+				<p>{{ jeux.categorie }}</p>
+			</div>
+
+            <a href="">Donner votre avis</a>
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+    <style>
+		.container{
+			display: flex;
+			width: 100%;
+		}
+
+		.box_1{
+			text-align: center;
+		}
+
+		.box{
+			display: block;
+			width: 33%;
+			justify-content: space-around;
+		}
+
+		.img_card{
+			width: 50%;
+		}
+
+		.info_card, .info_price{
+			border: 1px solid rgba(0,0,0,.1);
+			font-size: 22px;
+			max-width: 90%;
+			padding: 8px;
+			margin-bottom: 10px;
+		}
+
+		.info_card h1{
+			display: inline;
+			font-weight: 700;
+		}
+
+		.achat{
+			margin-left: 20vh;
+			min-width: 100px;
+			min-height: 50px;
+		}
+	</style>
+
+{% endblock %}

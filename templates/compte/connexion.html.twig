@@ -1,0 +1,69 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+   <div class="user">
+
+    <form method="post" action="">
+
+        <h1>User connexion</h1>
+        
+            <input class="entrer" type="text" name="nom_user" placeholder="Name" value="" required>
+
+            <input class="entrer" type="text" name="prenom" placeholder="Prenom" value="" required>
+
+            <input class="entrer" type="email" name="mail" placeholder="Mail" required>
+
+            <input class="entrer" type="password" name="mdp" placeholder="password" value="" required>
+
+            <input class="entrer" type="text" name="pseudo" placeholder="Pseudo" value="" required>
+
+            <input class='bouton' type="submit" value="submit">
+
+    </form>
+
+    </div>  
+
+<style>
+        
+    .user{
+        width: 40%;
+        margin: auto;
+        margin-top:3vh;
+    }
+
+    .user form {
+        padding: 5vh;
+        border: 2px solid #f1f1f1;
+        box-shadow: 0 0 0.5vh;
+    }
+    h1{
+        padding-top: 3vh;
+        margin: 0;
+        text-align: center;
+    }
+
+
+    input {
+        padding: 1.8vh 2.2vh;
+        margin: 0.5vh;
+        width: 100%;
+        border:2px solid;
+        font-size: 100%;
+        margin-bottom: 2vh;
+    }
+
+    .bouton {
+        background-color: #3087e1;
+        color: white;
+        padding: 1.5vw 1.8vw;
+        margin: 8px 0;
+        border: 1px solid #3087e1;
+        width: 100%;
+    }
+
+
+</style>
+
+
+{% endblock %}

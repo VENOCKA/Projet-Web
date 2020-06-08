@@ -1,0 +1,55 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <div class="Accueil">
+		{%  for j in jeux %}
+			<div class="card">
+				<div class="img">
+					<p class="name">{{ j.nom }}</p>
+                    <a href="/post/{{ j.id }}">
+                        {% if j.image is not empty %}
+                            <span class="card_level">
+                                <img class="imgBase" src="image/{{ j.image }}.png">
+                            </span>
+                        {% endif %}
+                        {% if j.image is empty %}
+                            <span class="card_level">
+                                <img class="imgBase" src="{{ asset('/image/default.png') }}">
+                            </span>
+                        {% endif %}
+                    </a>
+				</div>
+				
+			</div>
+        {% endfor %}
+    </div>
+        <style>
+        .Accueil{
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+        }
+
+        .card{
+			padding: 1%;
+			min-width: 250px;
+		}
+
+		.img{
+			text-align: center;
+		}
+
+		.name{
+			text-align: center;
+		}
+
+        .imgBase{
+            min-width: 250px;
+            min-height: 250px;
+            max-width: 250px;
+            max-height: 250px;
+        }
+
+	</style>
+
+{% endblock %}
